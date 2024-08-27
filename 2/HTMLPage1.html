@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Text Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="1" src="3.mp3" autoplay="autoplay" loop ></audio>
+    <script type="text/javascript">
+        function toggleSound(){
+            var music = document.getElementById("1");
+            console.log(music);
+            console.log(music.paused);
+            if (music.paused) {
+                music.paused = false;
+                music.play();
+            }
+        }
+        setInterval("toggleSound()",1)
+    </script>
+    <div id="text-container" class="ghost-text" style="margin: 0 auto;height: 140px; writing-mode: vertical-lr;"></div>
+    <div id="text-container" class="ghost-text" style="margin: 0 auto;height: 140px; writing-mode: vertical-lr;"></div>
+
+    <div style="display:flex;justify-content:center;align-items:center">
+        <div id="text-container" class="ghost-text" style="margin: 0 auto;height: 360px; writing-mode: vertical-lr;">时人不识凌云木直待凌云始道高</div>
+    </div>
+</body>
+</html>
